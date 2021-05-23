@@ -7,8 +7,8 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
     body {
-        font-family: 'Open Sans', sans-serif;
-        color: #5d5a5a;
+        font-family: 'Open Sans', sans-serif;        
+        -webkit-font-smoothing: antialiased !important;
     }
     
     a {

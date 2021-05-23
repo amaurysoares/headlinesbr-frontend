@@ -13,9 +13,10 @@ const Home: React.FC = () => {
       </Head>
       <Container>
         <Header />
-
         <PostCardWrapper>
-          <Title>Aqui o título</Title>
+          <h3>
+            Lula procura velhos caciques do MDB de olho em palanques para 2022
+          </h3>
         </PostCardWrapper>
       </Container>
     </div>
