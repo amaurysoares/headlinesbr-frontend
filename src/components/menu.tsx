@@ -33,16 +33,24 @@ function Menu() {
           <Link href="/about">SOBRE O PROJETO</Link>
         </li>
         <li>
-          <Link href="/time-machine">MÁQUINA DO TEMPO</Link>
+          <Link href="/time-machine">
+            MÁQUINA DO TEMPO
+          </Link>
         </li>
         <li>
-          <Link href="/categories">CATEGORIAS</Link>
+          <Link href="/categories">
+            CATEGORIAS
+          </Link>
         </li>
         <li>
-          <Link href="/filters">FILTROS</Link>
+          <Link href="/filters">
+            FILTROS
+          </Link>
         </li>
         <li>
-          <Link href="/contact">CONTATO</Link>
+          <Link href="/contact">
+            CONTATO
+          </Link>
         </li>
       </Ul>
     </>
