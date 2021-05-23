@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Link from 'next/link'
+
 const Ul = styled.ul`
   text-align: center;
   padding: 0px;
@@ -25,22 +27,30 @@ function Menu() {
     <>
       <Ul>
         <li>
-          <a href="">HOME</a>
+          <Link href="/">HOME</Link>
         </li>
         <li>
-          <a href="">SOBRE O PROJETO</a>
+          <Link href="/about">SOBRE O PROJETO</Link>
         </li>
         <li>
-          <a href="">MÁQUINA DO TEMPO</a>
+          <Link href="/time-machine">
+            MÁQUINA DO TEMPO
+          </Link>
         </li>
         <li>
-          <a href="">CATEGORIAS</a>
+          <Link href="/categories">
+            CATEGORIAS
+          </Link>
         </li>
         <li>
-          <a href="">FILTROS</a>
+          <Link href="/filters">
+            FILTROS
+          </Link>
         </li>
         <li>
-          <a href="">CONTATO</a>
+          <Link href="/contact">
+            CONTATO
+          </Link>
         </li>
       </Ul>
     </>
