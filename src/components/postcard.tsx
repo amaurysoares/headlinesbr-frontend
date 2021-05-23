@@ -1,4 +1,7 @@
 import 'react'
+import moment from 'moment'
+
+moment.locale('pt-BR')
 
 import styled from 'styled-components'
 
@@ -61,13 +64,16 @@ export type PostCardProps = {
 const PostCard = (props: PostCardProps) => {
   const { portal, url, title, created_at } = props.post
 
+  const postInfo = moment(created_at).fromNow()
+  const postInfoTitle = moment(created_at).format("DD/MM/YYYY [às] HH:mm")
+
   return (
     <Wrapper>
       <PostTag color={portal.color}>{portal.name}</PostTag>
       <PostUrl href={url}>
         <PostTitle>{title}</PostTitle>
       </PostUrl>
-      <PostInfo>{created_at}</PostInfo>
+      <PostInfo title={postInfoTitle}>{postInfo}</PostInfo>
     </Wrapper>
   )
 }
