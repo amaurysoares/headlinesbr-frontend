@@ -40,20 +40,21 @@ const PostInfo = styled.span`
   font-size: 0.65em;
 `
 
-type Portal = {
-  id: string,
+export type Portal = {
+  id: number,
   name: string,
   color?: string,
 }
 
-type Post = {
+export type Post = {
+  id: string,
   title: string
   url: string
   created_at: string,
   portal: Portal,
 }
 
-type PostCardProps = {
+export type PostCardProps = {
   post: Post
 }
 
