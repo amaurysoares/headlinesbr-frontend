@@ -1,5 +1,6 @@
 import 'react'
 import moment from 'moment'
+import 'moment-timezone'
 
 moment.locale('pt-BR')
 
@@ -18,7 +19,7 @@ const Wrapper = styled.div`
   }
 `
 
-const PostTag = styled.span`
+const PortalTag = styled.span`
   border: 1px solid #dddddd;
   color: ${({ color }) => (color ? color : 'inherit')};
   font-weight: 600;
@@ -62,16 +63,18 @@ export type PostCardProps = {
 }
 
 const PostCard = (props: PostCardProps) => {
-  const { portal, url, title, created_at } = props.post
+  const post = props.post
 
-  const createdAtDiff = moment(created_at).fromNow()
-  const createdAtTitle = moment(created_at).format("DD/MM/YYYY [às] HH:mm")
+  const now = moment().tz('America/Bahia')
+  const createdAt = moment(post.created_at).tz('America/Bahia')
+  const createdAtDiff = createdAt.from(now)
+  const createdAtTitle = createdAt.format("DD/MM/YYYY [às] HH:mm")
 
   return (
     <Wrapper>
-      <PostTag color={portal.color}>{portal.name}</PostTag>
-      <PostUrl href={url} target="_blank">
-        <PostTitle>{title}</PostTitle>
+      <PortalTag color={post.portal.color}>{post.portal.name}</PortalTag>
+      <PostUrl href={post.url} target="_blank">
+        <PostTitle>{post.title}</PostTitle>
       </PostUrl>
       <PostInfo title={createdAtTitle}>{createdAtDiff}</PostInfo>
     </Wrapper>
