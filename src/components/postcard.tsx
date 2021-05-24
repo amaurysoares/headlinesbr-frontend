@@ -64,8 +64,8 @@ export type PostCardProps = {
 const PostCard = (props: PostCardProps) => {
   const { portal, url, title, created_at } = props.post
 
-  const postInfo = moment(created_at).fromNow()
-  const postInfoTitle = moment(created_at).format("DD/MM/YYYY [às] HH:mm")
+  const createdAtDiff = moment(created_at).fromNow()
+  const createdAtTitle = moment(created_at).format("DD/MM/YYYY [às] HH:mm")
 
   return (
     <Wrapper>
@@ -73,7 +73,7 @@ const PostCard = (props: PostCardProps) => {
       <PostUrl href={url}>
         <PostTitle>{title}</PostTitle>
       </PostUrl>
-      <PostInfo title={postInfoTitle}>{postInfo}</PostInfo>
+      <PostInfo title={createdAtTitle}>{createdAtDiff}</PostInfo>
     </Wrapper>
   )
 }
