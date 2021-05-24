@@ -3,6 +3,7 @@ import moment from 'moment'
 import 'moment-timezone'
 
 moment.locale('pt-BR')
+moment.tz.setDefault('America/Bahia')
 
 import styled from 'styled-components'
 
@@ -65,8 +66,8 @@ export type PostCardProps = {
 const PostCard = (props: PostCardProps) => {
   const post = props.post
 
-  const now = moment().tz('America/Bahia')
-  const createdAt = moment(post.created_at).tz('America/Bahia')
+  const now = moment()
+  const createdAt = moment(post.created_at)
   const createdAtDiff = createdAt.from(now)
   const createdAtTitle = createdAt.format("DD/MM/YYYY [às] HH:mm")
 
