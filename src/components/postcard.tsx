@@ -70,7 +70,7 @@ const PostCard = (props: PostCardProps) => {
   return (
     <Wrapper>
       <PostTag color={portal.color}>{portal.name}</PostTag>
-      <PostUrl href={url}>
+      <PostUrl href={url} target="_blank">
         <PostTitle>{title}</PostTitle>
       </PostUrl>
       <PostInfo title={createdAtTitle}>{createdAtDiff}</PostInfo>
