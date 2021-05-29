@@ -9,9 +9,9 @@ const Ul = styled.ul`
   background-color: inherit;
   list-style: none;
   li {
-    font-size: 18px;
-    color: #5d5a5a;
-    font-weight: bold;
+    font-size: 16px;
+    color: #cccccc;
+    font-weight: 700;
     display: inline;
     a {
       padding: 2px 10px;
@@ -33,24 +33,16 @@ function Menu() {
           <Link href="/about">SOBRE O PROJETO</Link>
         </li>
         <li>
-          <Link href="/time-machine">
-            MÁQUINA DO TEMPO
-          </Link>
+          <Link href="/time-machine">MÁQUINA DO TEMPO</Link>
         </li>
         <li>
-          <Link href="/categories">
-            CATEGORIAS
-          </Link>
+          <Link href="/categories">CATEGORIAS</Link>
         </li>
         <li>
-          <Link href="/filters">
-            FILTROS
-          </Link>
+          <Link href="/filters">FILTROS</Link>
         </li>
         <li>
-          <Link href="/contact">
-            CONTATO
-          </Link>
+          <Link href="/contact">CONTATO</Link>
         </li>
       </Ul>
     </>
