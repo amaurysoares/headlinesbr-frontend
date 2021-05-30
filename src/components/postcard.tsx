@@ -21,16 +21,16 @@ const Wrapper = styled.div`
 `
 
 const PortalTag = styled.span`
-  border: 1px solid #dddddd;
+  border: 1px solid #eeeeee;
   color: ${({ color }) => (color ? color : 'inherit')};
-  font-weight: 600;
+  font-weight: 700;
   left: 30px;
-  padding: 0 5px;
+  padding: 0 15px;
   top: 0;
 `
 
 const PostTitle = styled.h3`
-  color: #535050;
+  color: #5d5a5a;
   font-size: 1.8em;
 `
 
@@ -46,17 +46,17 @@ const PostInfo = styled.span`
 `
 
 export type Portal = {
-  id: number,
-  name: string,
-  color?: string,
+  id: number
+  name: string
+  color?: string
 }
 
 export type Post = {
-  id: string,
+  id: string
   title: string
   url: string
-  created_at: string,
-  portal: Portal,
+  created_at: string
+  portal: Portal
 }
 
 export type PostCardProps = {
@@ -69,7 +69,7 @@ const PostCard = (props: PostCardProps) => {
   const now = moment()
   const createdAt = moment(post.created_at)
   const createdAtDiff = createdAt.from(now)
-  const createdAtTitle = createdAt.format("DD/MM/YYYY [às] HH:mm")
+  const createdAtTitle = createdAt.format('DD/MM/YYYY [às] HH:mm')
 
   return (
     <Wrapper>

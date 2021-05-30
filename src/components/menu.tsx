@@ -10,7 +10,7 @@ const Ul = styled.ul`
   list-style: none;
   li {
     font-size: 16px;
-    color: #cccccc;
+    color: #8f8c8c;
     font-weight: 700;
     display: inline;
     a {
