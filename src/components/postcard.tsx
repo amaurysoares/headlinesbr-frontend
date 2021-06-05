@@ -27,15 +27,11 @@ const PostTitle = styled.h3`
   color: #5d5a5a;
   font-size: 1.6em;
   &:hover {
-    color: #8888888;
+    color: #888888;
   }
 `
 
-const PostUrl = styled.a`
-  &:hover {
-    color: red;
-  }
-`
+const PostUrl = styled.a``;
 
 const PostInfo = styled.span`
   color: #888888;
