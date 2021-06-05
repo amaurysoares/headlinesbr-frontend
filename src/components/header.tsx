@@ -3,11 +3,11 @@ import Menu from '../components/menu'
 
 const Div = styled.div`
   text-align: center;
-  background-color: #fff;
+  background-color: #ffffff;
   width: 100%;
-  max-width: 1250px;
-  margin: 40px auto 0;
+  margin: auto;
   overflow: hidden;
+  padding: 30px 0;
 `
 const Text = styled.p`
   font-size: 1.1em;
@@ -18,12 +18,11 @@ const MainLogo = styled.h1`
     color: green;
   }
 `
-
 function Header() {
   return (
     <>
-      <Menu />
       <Div>
+        <Menu />
         <MainLogo>
           HEADLINES<span>BRASIL</span>
         </MainLogo>

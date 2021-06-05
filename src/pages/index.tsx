@@ -16,8 +16,8 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
       <Head>
         <title>HeadlinesBrasil</title>
       </Head>
+      <Header />
       <Container>
-        <Header />
         {posts.map(post => (
           <PostCard key={post.id} post={post}></PostCard>
         ))}
