@@ -11,6 +11,7 @@ type HomeProps = {
 }
 
 const Home: React.FC<HomeProps> = ({ posts }) => {
+
   return (
     <div>
       <Head>

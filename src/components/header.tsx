@@ -10,7 +10,7 @@ const Div = styled.div`
   padding: 30px 0;
 `
 const Text = styled.p`
-  font-size: 1.1em;
+  font-size: 1.2em;
 `
 const MainLogo = styled.h1`
   font-size: 2.8em;
@@ -22,7 +22,7 @@ function Header() {
   return (
     <>
       <Div>
-        <Menu />
+        {/* <Menu /> */}
         <MainLogo>
           HEADLINES<span>BRASIL</span>
         </MainLogo>
